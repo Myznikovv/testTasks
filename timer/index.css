@@ -1,0 +1,33 @@
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.timer-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.timer-num {
+    font-size: 48px;
+    line-height: 1;
+}
+
+.timer-text {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+}

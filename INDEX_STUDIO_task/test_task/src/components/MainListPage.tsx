@@ -61,7 +61,7 @@ const MainListPage = () => {
         gorizontalIcon =<GorizontalViewActive/> ;
         verticalIcon = (!isHoveredVertical)?<VerticalViewDefault/>:<VerticalViewHover/>;
     }
-    if (cards.length<1){
+    if (cards.length<1 && !loading){
         return <ErrorMessage/>
     }
 

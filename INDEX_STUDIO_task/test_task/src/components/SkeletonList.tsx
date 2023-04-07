@@ -1,10 +1,14 @@
 import {Box, Skeleton} from "@mui/material";
 import SkeletonCardVertical from "./SkeletonCardVertical";
 import * as React from "react";
+import SkeletonCardGorizontal from "./SkeletonCardGorizontal";
+import {useState} from "react";
 
 
 
-const VerticalSkeletonList = ()=>{
+const SkeletonList = ()=>{
+
+    const [direction, setDirection] = useState("vertical");
     return(
 
         <Box>
@@ -13,7 +17,8 @@ const VerticalSkeletonList = ()=>{
                 <Box sx={{ display:"flex", flexWrap:"wrap", justifyContent:"center", paddingTop:'92px'}}>
                     {Array.from(Array(16)).map((_, index) => (
                         <Box sx={{mb:"24px", ml:"24px"}} key={index}>
-                            <SkeletonCardVertical/>
+                            {(direction === "vertical")?<SkeletonCardVertical/>:
+                                <SkeletonCardGorizontal/>}
                         </Box>
                     ))}
                 </Box>
@@ -24,4 +29,4 @@ const VerticalSkeletonList = ()=>{
     )
 }
 
-export default VerticalSkeletonList
+export default SkeletonList

@@ -5,7 +5,7 @@ import {Box, Skeleton} from '@mui/material';
 const SkeletonCardGorizontal = () => {
     return (
         <Box sx={{
-            width:"472px", height:"134px", display:"flex",background:'#F8F8F8', borderRadius:"8px"
+            width:"472px", height:"134px", display:"flex",backgroundColor:'#F8F8F8', borderRadius:"8px"
         }}>
             <Box sx={{position:"relative" }}>
                 <Skeleton sx={{ borderRadius:"8px 0px 0 8px",bgcolor:"#EAEAEA"}} variant="rounded" animation="wave" width={156} height={134}/>
@@ -13,7 +13,7 @@ const SkeletonCardGorizontal = () => {
             </Box>
             <Box>
                 <Box sx={{padding:"10px 12px 0px 12px", display: "flex"}}>
-                    <Skeleton sx={{ fontSize: '22px', width: "256px", br:'8px', bgcolor:"#EAEAEA"}} variant="text" animation="wave" />
+                    <Skeleton sx={{ fontSize: '22px', width: "256px", br:'8px', backgroundColor:"#EAEAEA"}} variant="text" animation="wave" />
                     <Skeleton sx={{fontSize: '22px', width: "25px", br:'8px', ml:"9px", bgcolor:"#EAEAEA"}} variant="text" animation="wave" />
                 </Box>
                 <Box sx={{padding:"0px 12px"}}>

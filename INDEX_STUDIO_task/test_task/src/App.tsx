@@ -1,17 +1,15 @@
 import * as React from "react";
 import './App.css';
-import VerticalSkeletonList from "./components/VerticalSkeletonList";
-import useCards from "./Hooks/useCards";
-import VerticalCardList from "./components/VerticalCardList";
-import Spinner from "./components/Icons/Spinner/Spinner";
+import MainListPage from "./components/MainListPage";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 function App() {
- const {loading,newCardsLoading} = useCards();
-
   return (
     <div className="App">
-        {loading?<VerticalSkeletonList/>:<VerticalCardList/>}
-        {newCardsLoading?<Spinner/>:null}
+        <ErrorBoundary>
+            <MainListPage/>
+        </ErrorBoundary>
+
     </div>
 
   );

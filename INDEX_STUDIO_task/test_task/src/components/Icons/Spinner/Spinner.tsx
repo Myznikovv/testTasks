@@ -3,7 +3,8 @@ import * as React from "react";
 
 function Spinner() {
     return (
-        <Box sx={{ position: 'relative' }}>
+
+        <Box sx={{ position: 'relative', ml:"30px" }}>
             <CircularProgress
                 variant="determinate"
                 sx={{
@@ -26,7 +27,9 @@ function Spinner() {
                     marginRight: "auto",
                     right: 0,
                     textAlign: "center",
-                    strokeDasharray: "25px,200px"
+                    '& .MuiCircularProgress-circle': {
+                        strokeDasharray: "25px,200px"
+                    }
                 }}
                 size={40}
                 thickness={6}

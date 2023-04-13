@@ -1,0 +1,113 @@
+:root {
+    --base: #f00;
+}
+
+.clock {
+    box-shadow: inset 0 0 0 0.02em #000;
+    display: inline-block;
+    border-radius: 0.5em;
+    position: relative;
+    font-size: 250px;
+    overflow: hidden;
+    height: 1em;
+    width: 1em;
+}
+.clock__hand-container, .clock__hand, .clock__stroke {
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 1em;
+    width: 1em;
+    left: 50%;
+    top: 50%;
+}
+.clock__stroke::after {
+    content: "";
+    border-radius: 0 0 0.02em 0.02em;
+    background-color: #000;
+    margin-left: -0.01em;
+    position: absolute;
+    display: block;
+    height: 0.05em;
+    width: 0.02em;
+    top: 0.02em;
+    left: 50%;
+}
+.clock__stroke--1 {
+    transform: rotate(30deg);
+}
+.clock__stroke--2 {
+    transform: rotate(60deg);
+}
+.clock__stroke--3 {
+    transform: rotate(90deg);
+}
+.clock__stroke--4 {
+    transform: rotate(120deg);
+}
+.clock__stroke--5 {
+    transform: rotate(150deg);
+}
+.clock__stroke--6 {
+    transform: rotate(180deg);
+}
+
+.clock__stroke--7 {
+    transform: rotate(210deg);
+}
+.clock__stroke--8 {
+    transform: rotate(240deg);
+}
+.clock__stroke--9 {
+    transform: rotate(270deg);
+}
+.clock__stroke--10 {
+    transform: rotate(300deg);
+}
+.clock__stroke--11 {
+    transform: rotate(330deg);
+}
+.clock__hand--hour::after {
+    content: "";
+    border-radius: 0.015em 0.015em 0.01em 0.01em;
+    background-color: #000;
+    margin-bottom: -0.02em;
+    margin-left: -0.025em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 0.25em;
+    width: 0.05em;
+    bottom: 50%;
+    left: 50%;
+}
+.clock__hand--minute::after {
+    content: "";
+    border-radius: 0.012em 0.012em 0.01em 0.01em;
+    background-color: #000;
+    margin-bottom: -0.02em;
+    margin-left: -0.015em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 0.4em;
+    width: 0.03em;
+    bottom: 50%;
+    left: 50%;
+}
+.clock__hand--second::after {
+    content: "";
+    border-radius: 0.01em 0.01em 0.005em 0.005em;
+    background-color: var(--base) ;
+    margin-bottom: -0.02em;
+    margin-left: -0.005em;
+    font-size: inherit;
+    position: absolute;
+    display: block;
+    height: 0.46em;
+    width: 0.01em;
+    bottom: 50%;
+    left: 50%;
+}
